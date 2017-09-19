@@ -6,6 +6,7 @@ document.getElementById("add-button").onclick = function(){
 		input.value = "";
 	}
 	else{
-		alert("input is empty");
+		console.log("input is empty");
+		// alert("input is empty");
 	}
 }

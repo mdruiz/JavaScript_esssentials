@@ -9,16 +9,23 @@
 	<body>
 		<div id="header"> 
 			<input id="input-box" type="text" placeholder="Enter an activity..."></input>
-			<button id="add-button">
+			<button id="add-button" type="button">
 				<img id="plus-image" src="images/svg/plus-sign.svg"/> 
 			</button>
 			
 		</div>
 
-		<div>
+		<div id="container">
 			<!-- todo list -->
 			<ul id="todo-list">
-				<li>todo list goes here</li>
+				<li>
+					todo list goes here
+					<div class="buttons">
+						<button class="delete-button"><img src="images/svg/trash-icon.svg"/></button>
+						<div class="vertical-line"></div>
+						<button class="complete-button"><img src="images/svg/check-mark.svg"/></button>
+					</div>
+				</li>
 				<li>todo list goes here</li>
 				<li>todo list goes here</li>
 			</ul>
