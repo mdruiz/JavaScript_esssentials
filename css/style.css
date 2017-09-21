@@ -151,6 +151,15 @@ float:left;
 	border:0;
 	background: #FFF;
 }*/
+#horizontal-line{
+	width: 50%;
+	height: 1px;
+	border:none;
+	padding-top:10px; 
+	/*border-color: #C0C0C0;*/
+	/*border-top: 1px solid #8c8b8b;*/
+	border-top: 1px solid #C0C0C0
+}
 .vertical-line{
 	content: '';
 	width: 2px;
@@ -160,7 +169,6 @@ float:left;
 	left:51px;
 	background: #E0E0E0; 
 }
-
 #credits{
 	position: fixed;
 	bottom: 0;
