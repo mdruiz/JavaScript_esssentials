@@ -94,7 +94,6 @@ float:left;
 	float:left;
 }
 #completed-list li {
-	color:red;
 	/*font-size: 18px;*/
 	font-family:Helvetica;
 	width: 100%;
@@ -107,7 +106,10 @@ float:left;
 	margin:0px 0px 10px 0px;
 	box-shadow:0px 2px 4px rgba(44,62,80,0.15);
 	border-radius:10px;
-	}
+}
+/*#completed-list li:hover{
+	color:green;
+}*/
 
 .buttons{
 	width:105px;
@@ -129,7 +131,9 @@ float:left;
 	appearance:none;
 	-webkit-appearance:none;
 	-moz-appearance:none;
-
+}
+.delete-button img:hover{
+	content:url("../images/svg/trash-icon-hover.svg");
 }
 /*.delete-button{
 	width: 50px;

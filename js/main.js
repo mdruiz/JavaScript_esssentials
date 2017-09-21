@@ -1,3 +1,5 @@
+//holds activity data
+var data = {todo: [], completed: [] };
 
 //when add button is clicked, add activity
 document.getElementById("add-button").addEventListener("click", function(){
@@ -14,14 +16,15 @@ document.getElementById("add-button").addEventListener("click", function(){
 	}
 });
 
-// document.getElementsByClassName("delete-button")[0].onclick = function(){
-// 	console.log("delete button pressed");
-// }
-
-// document.getElementsByClassName("complete-button").onclick = function(){
-// 	console.log("complete button pressed");
-// }
-
+//when enter is pressed, add activity
+document.getElementById("input-box").addEventListener("keydown",function(e){
+	if(e.code === "Enter" && this.value){
+		console.log(this.value);
+		// adding new activity
+		addActivity(this.value);
+		this.value = "";
+	}
+});
 
 function addActivity(item){
 	var list = document.getElementById("todo-list");
@@ -82,9 +85,15 @@ function completeActivity(){
 	// console.log("complete button clicked");
 	var activity = this.parentNode.parentNode;
 	var parent = activity.parentNode;
-	var id = parent.id;
 
-	var target = (id == "todo-list") ? document.getElementById("completed-list"):document.getElementById("todo-list");
+	var target = (parent.id === "todo-list") ? document.getElementById("completed-list"):document.getElementById("todo-list");
+
+	if(parent.id === "todo-list"){
+		this.childNodes[0].src = "images/svg/check-mark-fill.svg"
+	}
+	else{
+		this.childNodes[0].src = "images/svg/check-mark.svg"
+	}
 
 	parent.removeChild(activity);
 	target.insertBefore(activity,target.childNodes[0]);
